@@ -1,5 +1,5 @@
 # parcel-plugin-prerender
-[![Known Vulnerabilities](https://snyk.io/test/github/abuffseagull/parcel-plugin-prerender/badge.svg)](https://snyk.io/test/github/abuffseagull/parcel-plugin-prerender)
+[![Known Vulnerabilities](https://snyk.io/test/github/msmuenchen/parcel-reporter-prerender/badge.svg)](https://snyk.io/test/github/msmuenchen/parcel-reporter-prerender)
 
 ## About
 
@@ -8,11 +8,18 @@ for [Webpack](https://github.com/webpack/webpack), this plugin is to bring prere
 [Parcel](https://github.com/parcel-bundler/parcel). It is meant to be a drop-in solution for any site or single-page-app.
 
 ### Installation
+
+First, install the plugin:
 ```
-npm install parcel-plugin-prerender -D
+npm install parcel-reporter-prerender -D
 ```
 
-### Usage
+Then, for a single build run that needs pre-rendering, run:
+```
+npm run build -- --reporter parcel-reporter-prerender
+```
+
+### Configuration
 By default, this plugin will render the `/` path when building with parcel (i.e. `parcel build` or `process.env.NODE_ENV == "production"`).
 As this plugin uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig),
 in order to configure the plugin,
